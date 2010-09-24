@@ -2,15 +2,19 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #eeeeee;
+    background: #eee;
+}
+body {
+    border-bottom: 1px solid #aaa;
 }
 
 li {
-    margin: 0.8em;
+    margin: .8em;
 }
 
 #header {
     background-color: #eeff66;
+    border-bottom: 1px solid #aaa;
 }
 
 #header h1 {
@@ -19,11 +23,10 @@ li {
     margin: 0;
 }
 
-#body {
-    background-color: #ffffff;
+#header, #content {
+    padding: 30px;
 }
 
-#header, #body {
-    padding: 30px;
-    border-bottom: 1px solid #aaaaaa;
+#content {
+    background-color: #fff;
 }
