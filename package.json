@@ -1,0 +1,7 @@
+{
+    "name": "ringo-handlebars",
+    "version": "0.1.0",
+    "description": "Enables RingoJS to use Handlebars.js templating.",
+    "keywords": ["templating", "ringo", "handlebars"],
+    "author": "Robert Thurnher (http://robert42.com/) <r.thurnher@gmail.com>"
+}

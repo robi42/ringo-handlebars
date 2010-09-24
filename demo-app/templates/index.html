@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ringo on Handlebars</title>
+    <link rel="stylesheet" href="/stylesheets/page.css" />
+  </head>
+  <body>
+    <p>
+      Hello, my name is {{name}}.<br/>
+      I am from {{hometown}}.<br/>
+      I have {{kids/length}} kids:
+    </p>
+    <ul>
+      {{#kids}}
+      <li>
+        {{name}} is {{age}}
+      </li>
+      {{/kids}}
+    </ul>
+  </body>
+</html>
