@@ -1,4 +1,5 @@
 var {Response} = require('ringo/handlebars/response');
+var fs = require('fs');
 
 exports.index = function (req) {
     var data = {
@@ -7,5 +8,9 @@ exports.index = function (req) {
             {name: 'Jimmy', age: '12'}, {name: 'Sally', age: '4'}
         ]
     };
-    return Response.handlebars(module.resolve('templates/index.html'), data);
+    var helpers = {
+        partials: {body: fs.read(module.resolve('templates/index.html'))}
+    };
+    return Response.handlebars(
+            module.resolve('templates/page.html'), data, helpers);
 };
