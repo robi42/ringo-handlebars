@@ -1,5 +1,5 @@
 var {Response} = require('ringo/handlebars/response');
-var fs = require('fs');
+var {Handlebars} = require('ringo/handlebars');
 
 exports.index = function (req) {
     var data = {
@@ -9,7 +9,7 @@ exports.index = function (req) {
         ]
     };
     var helpers = {
-        partials: {body: fs.read(module.resolve('templates/index.html'))}
+        partials: {body: Handlebars.compile(getResource('templates/index.html').content)}
     };
     return Response.handlebars(
             module.resolve('templates/page.html'), data, helpers);
