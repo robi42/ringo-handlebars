@@ -9,7 +9,10 @@ exports.index = function (req) {
         ]
     };
     var helpers = {
-        partials: {body: Handlebars.compile(getResource('templates/index.html').content)}
+        partials: {
+            body: Handlebars.compile(getResource(
+                    module.resolve('templates/index.html')).content)
+        }
     };
     return Response.handlebars(
             module.resolve('templates/page.html'), data, helpers);
